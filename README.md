@@ -1,5 +1,5 @@
 ---
-title: CybersecKG SA
+title: HF Inference ChatBox
 emoji: 💬
 colorFrom: yellow
 colorTo: purple
@@ -8,7 +8,7 @@ sdk_version: 5.0.1
 app_file: app.py
 pinned: false
 license: mit
-short_description: 'LightRAG_KG: SA cybersec'
+short_description: 'HF Inference ChatBox: First Take'
 ---
 
 An example chatbot using [Gradio](https://gradio.app), [`huggingface_hub`](https://huggingface.co/docs/huggingface_hub/v0.22.2/en/index), and the [Hugging Face Inference API](https://huggingface.co/docs/api-inference/index).
