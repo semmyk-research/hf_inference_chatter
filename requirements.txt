@@ -1,1 +1,5 @@
-huggingface_hub==0.25.2
+#huggingface_hub==0.25.2
+huggingface_hub[inference]==0.34.4
+dotenv==0.9.9
+gradio==5.42.0
+#node
