@@ -25,8 +25,20 @@ class JsonFormatter(logging.Formatter):
         return json.dumps(payload, ensure_ascii=False)
 
 
-def setup_logging(level: int = logging.INFO) -> None:
-    """Configure root logger with JSON output to both stdout and file."""
+#def setup_logging(level: int = logging.INFO) -> None:  ## Causing non-stop logging on HF spaces
+def setup_logging(level: int = None) -> None:
+    """Configure root logger with JSON output to both stdout and file.
+    
+    Args:
+        level: Logging level. If None, uses WARNING for production (HF Spaces) 
+               and INFO for local development.
+    """
+    if level is None:
+        # Auto-detect environment: WARNING for production, INFO for local dev
+        import os
+        is_production = os.getenv("SPACE_ID") or os.getenv("HF_SPACE_ID") or os.getenv("HUGGINGFACE_SPACE_ID")
+        level = logging.WARNING if is_production else logging.INFO
+    
     # Console handler
     console_handler = logging.StreamHandler(stream=sys.stdout)
     console_handler.setFormatter(JsonFormatter())
