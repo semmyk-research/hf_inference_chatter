@@ -3,5 +3,11 @@ logs/*
 
 ## emvironment
 .env
+*pycache*/*
+
 # SpecStory explanation file
+.specstory/*
 .specstory/.what-is-this.md
+
+# test
+tests/*pycache*
