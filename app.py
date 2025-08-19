@@ -183,7 +183,7 @@ def build_ui() -> gr.Blocks:
             fn=gradio_chat_fn,
             type="messages",
             chatbot=chatbot,
-            additional_inputs=[
+    additional_inputs=[
                 backend_choice,
                 model_tb,
                 provider_dd,
@@ -222,10 +222,11 @@ def build_ui() -> gr.Blocks:
             gr.Examples(
                 # Each example is [message, backend, model_id, provider, endpoint_url, system_message, max_tokens, temperature, top_p, stream, api_token]
                 examples=[
-                    ["Summarise Critical realism explanatory and explanatory ethos.", "Hugging Face Model ID", "openai/gpt-oss-120b", "fireworks-ai", "", "You are a helpful assistant.", 4096, 0.5, 0.2, True, ""],
+                    ["Summarise Critical realism explanatory and explanatory ethos.", "HF Provider Route", "openai/gpt-oss-120b", "fireworks-ai", "", "You are a helpful assistant.", 4096, 0.5, 0.2, True, ""],
                     #[{"role": "user", "content": "Summarise Critical realism explanatory and explanatory ethos."}, "Hugging Face Model ID", "openai/gpt-oss-120b", "fireworks-ai", "", "You are a helpful assistant.", 4096, 0.5, 0.2, True, ""],
                     ["Give me a Python snippet to parse JSON.", "Hugging Face Model ID", "openai/gpt-oss-120b", "fireworks-ai", "", "You are a helpful assistant.", 4096, 0.5, 0.2, True, ""],
                     ["What is the difference between temperature and top_p?", "Hugging Face Model ID", "openai/gpt-oss-120b", "fireworks-ai", "", "You are a helpful assistant.", 4096, 0.5, 0.2, True, ""],
+                    ## passing variables raised "TypeError: cannot pickle '_thread.lock' object"
                     #["Summarise explanatory and explanatory ethos.", backend_choice, model_tb, provider_dd, "", system_message_tb, max_token_sl, temperature_sl, top_p_sl, stream_sl, ""],
                     #["Give me a Python snippet to parse JSON.", backend_choice, model_tb, provider_dd, "", system_message_tb, max_token_sl, temperature_sl, top_p_sl, stream_sl, ""],
                     #["What's the difference between temperature and top_p?", backend_choice, model_tb, provider_dd, "", system_message_tb, max_token_sl, temperature_sl, top_p_sl, stream_sl, ""],
