@@ -201,16 +201,6 @@ def build_ui() -> gr.Blocks:
                 "Chat using `gr.ChatInterface` with multiple backends. "
                 "Read more: Gradio ChatInterface and HF auth docs."
             ),
-            # Each example is [message, backend, model_id, provider, endpoint_url, system_message, max_tokens, temperature, top_p, stream, api_token]
-            #examples=[                
-            #    ["Summarise Critical realism explanatory and explanatory ethos.", "Hugging Face Model ID", "openai/gpt-oss-120b", "fireworks-ai", "", "You are a helpful assistant.", 4096, 0.5, 0.2, True, ""],
-            #    ["Give me a Python snippet to parse JSON.", "Hugging Face Model ID", "openai/gpt-oss-120b", "fireworks-ai", "", "You are a helpful assistant.", 4096, 0.5, 0.2, True, ""],
-            #    ["What's the difference between temperature and top_p?", "Hugging Face Model ID", "openai/gpt-oss-120b", "fireworks-ai", "", "You are a helpful assistant.", 4096, 0.5, 0.2, True, ""],
-                #["Summarise explanatory and explanatory ethos.", backend_choice, model_tb, provider_dd, "", system_message_tb, max_token_sl, temperature_sl, top_p_sl, stream_sl, ""],
-                #["Give me a Python snippet to parse JSON.", backend_choice, model_tb, provider_dd, "", system_message_tb, max_token_sl, temperature_sl, top_p_sl, stream_sl, ""],
-                #["What's the difference between temperature and top_p?", backend_choice, model_tb, provider_dd, "", system_message_tb, max_token_sl, temperature_sl, top_p_sl, stream_sl, ""],
-            #],
-            #examples_per_page=0,  # Show examples but collapsed by default. ## No longer supported
             save_history=True,
             fill_height=True,
             fill_width=True,
