@@ -44,18 +44,24 @@ References:
 pip install -r requirements.txt
 ```
 
-2) Set authentication (choose one)
+2) Set authentication (choose one) [optional]
 
-- Via environment variable:
-
-```bash
-export HF_TOKEN=hf_xxx  # or HUGGINGFACEHUB_API_TOKEN
-```
-
-- Or via CLI login (interactive):
+- Via CLI login (interactive):
 
 ```bash
 huggingface-cli login
+```
+
+- or via environment .env
+
+```bash
+HF_TOKEN=hf_xxx  # or HUGGINGFACEHUB_API_TOKEN
+```
+
+- or via environment variable:
+
+```bash
+export HF_TOKEN=hf_xxx  # or HUGGINGFACEHUB_API_TOKEN
 ```
 
 Details: see HF auth guide: [link](https://huggingface.co/docs/huggingface_hub/v0.34.4/en/quick-start#authentication).
