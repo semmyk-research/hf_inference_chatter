@@ -3,6 +3,9 @@ on:
   push:
     branches: [main]
 
+  # assist: https://huggingface.co/docs/hub/en/spaces-github-actions
+  ### git remote add space https://huggingface.co/spaces/HF_USERNAME/SPACE_NAME   #Add space repo
+  ### git push --force space main   #force push to sync everything for the first time
   # to run this workflow manually from the Actions tab
   workflow_dispatch:
 
